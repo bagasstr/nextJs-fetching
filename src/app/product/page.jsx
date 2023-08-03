@@ -16,10 +16,10 @@ const page = async () => {
   return (
     <div>
       <div>
-        {Object.values(produk || {}).map((item) => (
+        {/* {Object.values(produk || {}).map((item) => (
           <h1 key={item.id}>{item.title}</h1>
-        ))}
-        {/* <h1>{produk.title}</h1> */}
+        ))} */}
+        <h1>{produk.title}</h1>
       </div>
     </div>
   );
