@@ -3,7 +3,7 @@ import React from "react";
 const getProduct = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/products", {
-      cache: "no-cache",
+      cache: "no-store",
     });
     return res.json();
   } catch (error) {
