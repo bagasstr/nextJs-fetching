@@ -5,8 +5,7 @@ const getProduct = async () => {
     const res = await fetch("http://localhost:3000/api/products", {
       cache: "no-store",
     });
-    const data = await res.json();
-    return data;
+    return res.json();
   } catch (error) {
     console.error("gagal fetching data!");
   }
