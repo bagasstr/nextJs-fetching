@@ -2,7 +2,7 @@ import React from "react";
 
 const getProduct = async () => {
   try {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    const res = await fetch("http://localhost:3000/api/products", {
       cache: "no-store",
     });
     const data = await res.json();
@@ -17,9 +17,7 @@ const page = async () => {
   return (
     <div>
       <div>
-        {produk.map((item) => (
-          <h1 key={item.id}>{item.title}</h1>
-        ))}
+        {produk && produk.map((item) => <h1 key={item.id}>{item.title}</h1>)}
         {/* <h1>{produk.title}</h1> */}
       </div>
     </div>
