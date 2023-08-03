@@ -3,7 +3,7 @@ import React from "react";
 const getProduct = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/products", {
-      cache: "no-store",
+      cache: "no-cache",
     });
     return res.json();
   } catch (error) {
@@ -16,7 +16,9 @@ const page = async () => {
   return (
     <div>
       <div>
-        {produk && produk.map((item) => <h1 key={item.id}>{item.title}</h1>)}
+        {Object.values(produk || {}).map((item) => (
+          <h1 key={item.id}>{item.title}</h1>
+        ))}
         {/* <h1>{produk.title}</h1> */}
       </div>
     </div>
